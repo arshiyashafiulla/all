@@ -1,0 +1,100 @@
+arshiya11
+arshiya@6A
+-----------------------------------------------------------------------------------------
+
+how to install ruby on ubuntu 18.04 instanjce
+https://www.howtoforge.com/tutorial/ubuntu-ruby-on-rails/
+-------------------------------------------------------------------------
+[ auto sacaling 
+collections of EC2 instances, called Auto Scaling groups
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html ]
+-----------------------------------------
+rds 
+[
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html  ]
+my sql
+---------------------------------------------------------------------------------
+[aws 
+https://data-flair.training/blogs/aws-rds/ ]
+---------------------------------------------------------------------------
+Ubuntu Server 18.04 LTS (HVM), SSD Volume Type - ami-0123b531fc646552f (64-bit x86) / ami-08ddb3f251a88cf33 (64-bit Arm)
+--------------------------------------------------------------------------------
+s3 procedure
+
+https://docs.aws.amazon.com/AmazonS3/latest/gsg/SigningUpforS3.html
+
+--------------------------------------------------------
+edx tutorial
+https://courses.edx.org/courses/course-v1:AWS+OTP-AWSD1+2T2019/courseware/963403ee969147e08a223b4eab82d531/6cc426b3d258461eb0c0bca99c8f7a38/?child=first
+
+https://www.dotnettricks.com/learn/devops/building-ci-cd-pipeline-with-the-azure-devops
+----------------------------------------------------------------------
+https://www.simplilearn.com/aws-cloudformation-tutorial-article
+
+https://www.guru99.com/creating-amazon-ec2-instance.html
+
+https://intellipaat.com/blog/aws-cloudformation-tutorial/
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
+
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/GettingStartedTutorial.html
+
+https://www.edureka.co/blog/ec2-aws-tutorial-elastic-compute-cloud/
+
+https://www.edureka.co/blog/restore-ec2-from-snapshot/   ----------------------------
+
+https://hackernoon.com/what-is-amazon-elastic-load-balancer-elb-16cdcedbd485
+
+https://www.how2shout.com/how-to/download-and-install-ruby-on-rails-on-windows.html [how to install ruby on rails]
+
+code deploy = https://www.youtube.com/watch?v=qZa5JXmsWZs
+
+0----------------------------------------------------------
+connect ec2 linux abd rds = https://www.youtube.com/watch?v=xzCgeRxSzy4
+
+---------------------------------------------------------------------------------
+clous formation = https://www.youtube.com/watch?v=LDSMIvUuFOE
+
+https://www.youtube.com/watch?v=t97jZch4lMY
+---------------------------------------------
+auto scaling = https://www.youtube.com/watch?v=-hFAWk6hyZA
+----------------------------------------------------------------------------
+auto scaling is like create the image(ami) of existing server (max 2)
+ so that when more request can replicate it fast
+auto sacling procedure
+1.crete an AMI= that is data to be there in the server
+2.launch configuration= is what type of machine you want where the ami data can be useful
+3.auto scaling group= like in which case we want to auto scale
+load balancer is to handle the traffic of so many servers
+----------------------------------------------------------------------------
+to restore from snapshot = https://www.edureka.co/blog/restore-ec2-from-snapshot/
+-------------------------------------------------------------------------------
+for code deploy = https://www.youtube.com/watch?v=lorT86dVuHM
+-------------------------------------------------------------------------------------
+load balancer = https://www.edureka.co/blog/elastic-load-balancer-tutorial-application-load-balancer
+1.create target group one.
+2.create target group two.
+3.create a load balancer selecting on of the target group.
+4.add listener = the if else statement.
+5.click on dns website/ a,nd DNS website/two.
+
+https://hackernoon.com/what-is-amazon-elastic-load-balancer-elb-16cdcedbd485
+------------------------------------------------------------------------------------------------
+https://register.gotowebinar.com/recording/recordingView?webinarKey=6825671830112088075&registrantEmail=szmha5.an47%40gmail.com
+for edureka ec2 creation 
+---------------------------------------------------------------------------------------------------------------------------------------------
+free 7 days trail https://cloudacademy.com/library/amazon-web-services/ (super good)
+------------------------------------------------------------------------------------------
+code commit
+db migrate with ruby using mysql
+code deply using s3
+-------------------------------------------------------------------------------------------
+how to install apache on ubuntu
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-18-04-quickstart
+------------------------------------------------------------------------------------------------
+code deploy
+
+0.https://docs.aws.amazon.com/codedeploy/latest/userguide/applications-create-in-place.html(fisrt crete 3 steps)
+1.https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-ec2-create.html (first create instance).
+to install code deploy agent
+2.https://docs.aws.amazon.com/codedeploy/latest/userguide/resource-kit.html#resource-kit-bucket-names(bucket name)

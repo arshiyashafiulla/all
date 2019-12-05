@@ -1,0 +1,10 @@
+https://www.edx.org/course/aws-developer-building-on-aws-2
+-------------------------------------------------------------------------
+.net basic program link 
+
+[
+https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro ]
+-------------------------------------------------------------------------------
+https://www.youtube.com/watch?v=_YGR9hOR_PI
+0----------------------------------------------------------
+connect ec2 linux abd rds = https://www.youtube.com/watch?v=xzCgeRxSzy4

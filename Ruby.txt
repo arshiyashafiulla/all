@@ -1,0 +1,298 @@
+In Ruby, your information (or data) can come in different types. 
+There are three data types in Ruby that we’re interested in right now: 
+Numeric (any number), 
+Boolean (which can be true or false),
+and String (words or phrases like "I'm learning Ruby!").
+
+"puts" is used to print value default new line is generated
+"print" #no new line generated
+
+#completed first lesson of ruby
+puts name = "premium".length
+=begin
+samsung
+=end
+
+using string method like a chain
+
+puts name="hello".length.reverse.downcase.upcase
+
+to take input from users give name = gets.chomp
+
+Printing the Output
+
+As you might have noticed, Ruby’s not really returning any feedback to us. 
+We want to be able to see our string formatting in action! 
+For this, we’ll need one more new piece of syntax.
+
+If you define a variable monkey that’s equal to the string "Curious George",
+ and then you have a string that says "I took #{monkey} to the zoo", 
+Ruby will do something called string interpolation and replace the #{monkey} bit with the
+ value of monkey—that is, it will print "I took Curious George to the zoo".
+ We can do the same thing here! For example:
+
+first_name = "Kevin"
+puts "Your name is #{first_name}!"
+will print “Your name is Kevin!”
+
+print "and state"
+state = gets.chomp
+state.upcase!
+
+It modifies the value of the variable.
+-----------------------------------------------------------
+For example,
+
+name = "jOSHua"
+print name.capitalize
+print name
+will give you "Joshua" and then "jOSHua" because the capitalize method 
+was called but it wasn't saved into the variable name.
+
+Inserting the "!", however, stores it in the variable for eternity.
+
+name = "jOSHua"
+print name.capitalize!
+print name
+will give you "Joshua" followed by "Joshua"
+---------------------------------------------------
+
+syntax for if
+if
+  dfhvf
+elsif
+  erger
+else
+  werfrf
+end
+-----------------------------------------
+
+Let’s say you don’t want to eat unless you’re hungry. 
+That is, while you’re not hungry, you write programs,
+ but if you are hungry, you eat. You might write that program in Ruby like this:
+
+unless hungry
+  # Write some sweet programs
+else
+  # Have some noms
+end
+---------------------------------------------------------
+With && both comparisons on the left and right must evaluate to true for the entire statement to return 
+If the left side does not return true it will not bother trying the right side
+---------------------------------------------------------
+Setting Up the 'If' Branch, Part 1
+All right! Time to add in a little control flow.
+
+For the if half of our branch, we want to check whether the user’s input contains an "s".
+
+if string_to_check.include? "substring"
+We can do that using Ruby’s .include? method, 
+which evaluates to true if it finds what it’s looking for and false otherwise.
+
+(As a general rule, Ruby methods that end with ? evaluate to the boolean values true or false.)
+-------------------------------------------------------------
+Good! Now let’s complete our if statement.
+
+When we find "s", we want Ruby to replace every instance of "s" it finds with "th".
+ We can do this with the .gsub! method, which stands for global substitution.
+
+The syntax looks like this: rb string_to_change.gsub!(/s/, "th")
+
+When we get to later lessons, we’ll explain why the /s/ has to be between slashes instead of between quotes.
+ Note: you cannot put a space between gsub! and the bit in parentheses.
+
+Remember, you want the ! at the end of the method name so that Ruby will change the string in-place.
+
+puts "enter something"
+user_input = gets.chomp
+user_input.downcase!
+if user_input.include? "s"
+   user_input.gsub!(/s/, "th")
+  print "the output is #{user_input}" 
+end
+------------------------------------------------------
+We’ve been using syntax like counter = counter + 1, which works, but as you’ll increasingly find with Ruby, 
+there’s always another way.
+
+A shortcut is to use an assignment operator. You already know one assignment operator: =, 
+which sets a variable. You can update a variable with additional assignment operators,
+ however, which include +=, -=, *=, and /=. For instance, when you type
+
+counter += 1
+You’re telling Ruby: “Add 1 to counter, then assign that new value back to counter.” 
+This provides a succinct way of updating variable values in our programs.
+
+Some languages have the increment operators ++ and -- (which also add or subtract 1 from a value), 
+but Ruby does not. You’ll have to make do with += and -=!
+
+counter = 1
+while counter < 11
+  puts counter
+  counter += 1
+end
+------------------------------------------
+The next keyword can be used to skip over certain steps in the 
+For instance, if we don’t want to print out the even numbers, we can write:
+
+for i in 1..5
+  next if i % 2 == 0
+  print i
+end
+
+In the above example, we loop through the range of 1 through 5, assigning each number to i in turn.
+If the remainder of i / 2 is zero, we go to the next iteration of the loop.
+Then we print the value of i. This line only prints out 1, 3, and 5 because of the previous line.
+-----------------------------------------------------------------
+numbers = [1, 2, 3, 4, 5]
+
+# one way to loop
+numbers.each { |item| puts item }
+
+# another way to loop
+numbers.each do |item|
+  puts item
+end
+-------------------------------------------------------------------
+puts "enter something"
+text = gets.chomp
+
+puts "enter more something"
+redact = gets.chomp
+
+words = text.split(" ")
+words.each do |w|
+  if w == redact
+    print "REDACTED"
+  else
+     print w + " "
+  end
+end
+-------------------------------------------------------------
+ splat arguments. Splat arguments are arguments preceded by a *,
+ which tells the program that the method can receive one or more arguments.
+def what_up(greeting, *friends)
+  friends.each { |friend| puts "#{greeting}, #{friend}!" }
+end
+
+what_up("What up", "Ian", "Zoe", "Zenas", "Eleanor")
+
+---------------------------------------------------
+So if I want to extract the "EL" substring from "HELLO", I can do it in different ways:
+
+puts "HELLO"[1 .. 2]
+puts "HELLO"[1 ..-3]
+puts "HELLO"[-4.. 2]
+puts "HELLO"[-4..-3]
+These lines all produce the same output
+----------------------------------------------------------------
+combined comparison operator to compare two Ruby objects.
+ The combined comparison operator looks like this: <=>.
+ It returns 0 if the first operand (item to be compared) equals the second,
+ 1 if the first operand is greater than the second, 
+and -1 if the first operand is less than the second.
+
+in decending order sort
+fruits = ["orange", "apple", "banana", "pear", "grapes"]
+fruits.sort! do |a1, a2|
+  a2 <=> a1
+end
+--------------------------------------------------------
+https://www.codecademy.com/courses/learn-ruby/lessons/a-night-at-the-movies/exercises/nice-work-1?action=resume_content_item
+
+----------------------------------------------------------------------
+puts "hello!" if true
+o/p  hello!
+puts "hi!!!!!" unless false
+o/p hi!
+puts 3<4 ? "3 is less": "4 is less" 
+o/p 3 is less
+
+puts "Hello there!"
+greeting = gets.chomp
+
+# Add your case statement below!
+case greeting
+  when "English"
+  puts "Hello!"
+  when "French"
+  puts "Bonjour!"
+  when "German"
+  puts "GutenTag"
+  when "Finnish"
+  puts "Haloo!"
+  else
+  puts "I don’t know that language!"
+end
+
+-----------------------------------------------------------------------
+"L".upto("P") { |letter| puts letter }
+o/p L
+    M
+    N
+    O
+    P
+----------------------------------------------------------------------
+alphabet = ["a", "b", "c"]
+alphabet.push("d") 
+
+------------------------------------------------------------------
+3.times do
+  puts "I'm a refactoring master!"
+end
+---------------------------------------------------------------
+In Ruby, we use @ before a variable to signify that it’s an instance 
+This means that the variable is attached to the instance of the class.
+------------------------------------------------------------------------
+There Can Be Only One!
+Any given Ruby class can have only one superclass.
+does not support multiple inheritance.
+------------------------------------------
+Inheriting a Fortune
+
+class Message
+   @@messages_sent = 0
+  def initialize(from, to)
+    @from = from
+    @to = to
+    @@messages_sent +=1 
+  end
+end
+my_message = Message.new("arshiya","noorain")
+class Email < Message           #inheritance in ruby
+  def initialize(subject)
+    @subject = subject
+  end
+end
+
+----------------------------------------------
+@ is the instance variable and inside defination
+
+@@ is the class variable globally used inside a method
+
+--------------------------------------------------------
+class Dog
+  def initialize(name, breed)
+    @name = name
+    @breed = breed
+  end
+  
+  public
+  def bark
+    puts "Woof!"
+  end  
+
+the above is the public method
+
+private
+  def id
+    @id_number = 12345
+  end
+
+the above is the private method
+
+------------------------------------------------------------
+Like class names, module names are written in CapitalizedCamelCase, rather than lowercase_with_underscores.
+It doesn’t make sense to include variables in modules, since variables (by definition) change (or vary).
+Constants, however, are supposed to always stay the same, 
+so including helpful constants in modules is a great idea.
+--------------------------------------
